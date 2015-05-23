@@ -8,6 +8,23 @@
     android:orientation="vertical"
     tools:context=".android.nasirabed.com.colorpicker.MainActivity" >
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789."
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#ffffffff"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal" />
+    </RelativeLayout>
+
     <com.larswerkman.holocolorpicker.ColorPicker
         android:id="@+id/picker"
         android:layout_width="fill_parent"
@@ -35,7 +52,8 @@
             android:background="@android:color/holo_green_light"
             android:textColor="@android:color/background_dark"
             android:textSize="@dimen/abc_text_size_large_material"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:onClick="onButtonClick" />
     </LinearLayout>
 
 </LinearLayout>
