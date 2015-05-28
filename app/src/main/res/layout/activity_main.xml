@@ -33,10 +33,15 @@
 
     <com.larswerkman.holocolorpicker.OpacityBar
         android:id="@+id/opacitybar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="8dip"/>
+
+    <com.larswerkman.holocolorpicker.SaturationBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saturationbar" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -45,15 +50,20 @@
         android:layout_gravity="center_horizontal">
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apply Color"
-            android:background="@android:color/holo_green_light"
-            android:textColor="@android:color/background_dark"
+            android:background="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="@dimen/abc_text_size_large_material"
             android:layout_gravity="center"
             android:onClick="onButtonClick" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar" />
     </LinearLayout>
 
 </LinearLayout>
