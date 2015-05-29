@@ -28,7 +28,6 @@ import java.security.Key;
 public class MainActivity extends Activity implements ColorPicker.OnColorChangedListener {
 
     private ColorPicker picker;
-    private OpacityBar opacityBar;
     private SaturationBar saturationBar;
     private Button button;
     private SeekBar seekBar;
@@ -46,13 +45,12 @@ public class MainActivity extends Activity implements ColorPicker.OnColorChanged
         setContentView(R.layout.activity_main);
 
         picker = (ColorPicker) findViewById(R.id.picker);
-        opacityBar = (OpacityBar) findViewById(R.id.opacitybar);
         saturationBar = (SaturationBar) findViewById(R.id.saturationbar);
         button = (Button) findViewById(R.id.button);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
 
+        saturationBar.setBottom(50);
 
-        picker.addOpacityBar(opacityBar);
         picker.addSaturationBar(saturationBar);
         picker.setOnColorChangedListener(this);
 

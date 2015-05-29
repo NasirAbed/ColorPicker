@@ -31,17 +31,28 @@
         android:layout_height="fill_parent"
         android:layout_gravity="center"/>
 
-    <com.larswerkman.holocolorpicker.OpacityBar
-        android:id="@+id/opacitybar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="8dip"/>
-
     <com.larswerkman.holocolorpicker.SaturationBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/saturationbar" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:paddingTop="10px"
+        android:paddingBottom="10px" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply Color"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/abc_text_size_large_material"
+        android:layout_gravity="center"
+        android:onClick="onButtonClick" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -49,21 +60,6 @@
         android:layout_height="fill_parent"
         android:layout_gravity="center_horizontal">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Apply Color"
-            android:background="@android:color/black"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/abc_text_size_large_material"
-            android:layout_gravity="center"
-            android:onClick="onButtonClick" />
-
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/seekBar" />
     </LinearLayout>
 
 </LinearLayout>
